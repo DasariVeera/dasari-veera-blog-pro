@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% for post in posts %}
+<div class="media-body">
+    <div class="article-metadata">
+        <a href="{% url 'user_profile' post.auther.pk %}">{{ post.auther }}</a>
+        <small class="text-muted">{{post.date_posted | date:"F d, Y"}}</small>
+    </div>
+    <div class="article-metadata">
+        <h2 class="article-title"><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></h2>
+        <p class="article-content"> {{ post.content }}</p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="media-body">
+    <div class="article-metadata">
+        <a href="{% url 'profile' %}">{{ object.auther }}</a>
+        <small class="text-muted">{{post.date_posted | date:"F d, Y"}}</small>
+    </div>
+    <h2 class="article-title">{{ object.title }}</h2>
+    <p class="article-content"> {{ post.content }}</p>
+    <div>
+        <a class="btn btn-outline-info" href="{% url 'update' post.id %}">Update </a>
+        <a class="btn btn-outline-danger" href="{% url 'delete' post.id %}">delete </a>
+    </div>
+</div>
+{% endblock content %}

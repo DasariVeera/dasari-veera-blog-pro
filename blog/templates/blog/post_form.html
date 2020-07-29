@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-outline-info" type="submit">Post</button>
+    {% if object.id %}
+        <a class="btn btn-outline-secondary" href="{% url 'detail' object.id %}">Cancel </a>
+    {% else %}
+        <a class="btn btn-outline-secondary" href="{% url 'home' %}">Cancel </a>
+    {% endif %}
+{% endblock content %}
