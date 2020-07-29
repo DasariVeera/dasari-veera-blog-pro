@@ -25,7 +25,7 @@ SECRET_KEY = 'x8!98mhu&8_h=@sf5^c4*1fm*&dj+_^r)fj3=#axagjho5qgn6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dasari-veera-blog-proj.herokuapp.com", "dasari-veera-blog..herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["dasari-veera-blog-proj.herokuapp.com", "dasari-veera-blog.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
